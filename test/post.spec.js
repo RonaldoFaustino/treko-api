@@ -62,7 +62,7 @@ describe('post', () => {
                 .end((err, res) => {
                     expect(res).to.has.status(400)
                     console.log(res.body)
-                    expect(res.body.errors.title.message).to.eql('title: Oops! Title is required.')
+                    expect(res.body.errors.title.message).to.eql('Task validation failed: title: Oops! Title is required.')
                     done()
                 })
         })
